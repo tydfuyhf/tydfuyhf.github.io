@@ -152,8 +152,8 @@
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
       margin-top: 18px;
     }
 
@@ -161,20 +161,28 @@
       border: 1px solid #e5e5e5;
       border-radius: 14px;
       overflow: hidden;
-      background: #f8f8f8;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
     }
 
     .gallery img {
       width: 100%;
+      height: 300px;
+      object-fit: contain;
+      background: #f7f7f7;
       display: block;
     }
 
     .gallery figcaption {
-      font-size: 13px;
-      color: #555;
-      padding: 8px 10px;
+      min-height: 54px;
+      font-size: 15px;
+      color: #444;
+      padding: 12px 14px;
       border-top: 1px solid #e5e5e5;
       background: #fff;
+      display: flex;
+      align-items: center;
     }
 
     .demo-media {
@@ -204,6 +212,10 @@
 
       .gallery {
         grid-template-columns: 1fr;
+      }
+
+      .gallery img {
+        height: 260px;
       }
     }
   </style>
@@ -289,18 +301,18 @@
             </figure>
 
             <figure>
-              <img src="assets/front_view.png" alt="Front RGB-D camera view" />
+              <img src="assets/front_view.png" alt="RGB-D camera view" />
               <figcaption>RGB-D camera view</figcaption>
             </figure>
 
             <figure>
-              <img src="assets/vgn_view1.png" alt="VGN visualization view" />
+              <img src="assets/vgn_view1.png" alt="VGN grasp visualization" />
               <figcaption>VGN grasp visualization</figcaption>
             </figure>
 
             <figure>
-              <img src="assets/4view_240k_vgn_pose.png" alt="VGN grasp pose candidates" />
-              <figcaption>Predicted grasp pose candidates</figcaption>
+              <img src="assets/4view_240k_vgn_pose.png" alt="TSDF visualization" />
+              <figcaption>TSDF visualization</figcaption>
             </figure>
           </div>
         </div>
