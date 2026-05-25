@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Park Sang Hyun</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: #f6f6f6;
+      color: #222;
+      line-height: 1.65;
+    }
+
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 48px 24px;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 48px;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 48px;
+      height: fit-content;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 210px;
+      height: 210px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #ddd;
+      border: 1px solid #ddd;
+      margin-bottom: 24px;
+    }
+
+    .name {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .role {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 18px;
+    }
+
+    .contact {
+      font-size: 14px;
+      color: #444;
+      margin-top: 18px;
+    }
+
+    .contact div {
+      margin-bottom: 6px;
+    }
+
+    .content {
+      background: #fff;
+      padding: 44px 50px;
+      border-radius: 16px;
+      border: 1px solid #e5e5e5;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    section {
+      margin-bottom: 42px;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 22px;
+      border-bottom: 1px solid #e5e5e5;
+      padding-bottom: 8px;
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .meta {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 8px;
+    }
+
+    .item {
+      margin-bottom: 28px;
+    }
+
+    .item:last-child {
+      margin-bottom: 0;
+    }
+
+    .keywords {
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .tag {
+      font-size: 13px;
+      padding: 4px 10px;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      border-radius: 999px;
+      color: #334155;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    @media (max-width: 820px) {
+      .container {
+        grid-template-columns: 1fr;
+        padding: 28px 18px;
+        gap: 28px;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .content {
+        padding: 30px 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <aside class="sidebar">
+      <img class="profile-img" src="assets/profile.jpg" alt="Park Sang Hyun profile photo" />
+
+      <div class="name">Park Sang Hyun</div>
+
+      <div class="role">
+        Undergraduate Student<br />
+        Kyung Hee University<br />
+        Software Convergence<br />
+        Robotics & Computer Vision Track
+      </div>
+
+      <div class="contact">
+        <div><strong>Email</strong>: <a href="mailto:allen516@khu.ac.kr">allen516@khu.ac.kr</a></div>
+        <div><strong>GitHub</strong>: <a href="https://github.com/tydfuyhf">tydfuyhf</a></div>
+      </div>
+    </aside>
+
+    <article class="content">
+      <section>
+        <h2>About</h2>
+        <p>
+          I am an undergraduate student at Kyung Hee University interested in robotic systems
+          that connect visual perception, 3D scene understanding, grasp prediction, and motion planning.
+        </p>
+      </section>
+
+      <section>
+        <h2>Research Interests</h2>
+        <p class="keywords">
+          Robotics · Computer Vision · 3D Scene Understanding · Robot Manipulation
+        </p>
+
+        <div class="tag-list">
+          <span class="tag">ROS2</span>
+          <span class="tag">RGB-D Perception</span>
+          <span class="tag">Grounded-SAM</span>
+          <span class="tag">Point Cloud</span>
+          <span class="tag">TSDF</span>
+          <span class="tag">VGN</span>
+          <span class="tag">MoveIt2</span>
+          <span class="tag">Robot Grasping</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+
+        <div class="item">
+          <h3>Kyung Hee University</h3>
+          <div class="meta">Software Convergence, Robotics & Computer Vision Track · 2024 - Present</div>
+          <p>Undergraduate Student · 3rd Year, 1st Semester</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Projects</h2>
+
+        <div class="item">
+          <h3>Grounded-SAM + VGN ROS2 Grasping Pipeline</h3>
+          <div class="meta">
+            <a href="https://github.com/tydfuyhf/grounded_sam_vgn_ros2_pipeline">
+              GitHub Repository
+            </a>
+          </div>
+
+          <ul>
+            <li>
+              Built a ROS2-based perception-to-grasp pipeline integrating Grounded-SAM,
+              RGB-D perception, semantic point cloud generation, signed TSDF construction,
+              and VGN-based grasp candidate prediction.
+            </li>
+            <li>
+              Designed the pipeline toward scene-aware robotic grasping and motion planning.
+            </li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <h3>VGN Data Generation & Retraining</h3>
+          <div class="meta">
+            <a href="https://github.com/tydfuyhf/vgn_data_generate_train">
+              GitHub Repository
+            </a>
+          </div>
+
+          <ul>
+            <li>
+              Customized VGN data generation and retraining pipeline for TSDF-based robotic grasp prediction.
+            </li>
+            <li>
+              Generated packed and piled synthetic grasping scenes and conducted retraining experiments on GPU servers.
+            </li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <h3>4-DOF Fin Ray Robot Arm</h3>
+          <div class="meta">
+            <a href="https://github.com/tydfuyhf/4dof_fin_ray">
+              GitHub Repository
+            </a>
+          </div>
+
+          <ul>
+            <li>
+              Designed and 3D-printed a 4-DOF robotic arm with compliant Fin Ray-inspired structure.
+            </li>
+            <li>
+              Implemented URDF modeling, RViz2 visualization, and inverse-kinematics-based end-effector control.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Technical Skills</h2>
+
+        <div class="item">
+          <h3>Robotics / Vision</h3>
+          <p>
+            ROS2 · RGB-D Perception · Grounded-SAM · YOLO · Point Cloud Projection · Multi-view Fusion
+          </p>
+        </div>
+
+        <div class="item">
+          <h3>Robot Learning / Grasping</h3>
+          <p>
+            VGN · TSDF Representation · Synthetic Data Generation · Grasp Dataset Construction · Model Retraining
+          </p>
+        </div>
+
+        <div class="item">
+          <h3>Programming / System</h3>
+          <p>
+            Python · C++ · Linux · CUDA Environment Setup · GPU Server Training
+          </p>
+        </div>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
