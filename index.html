@@ -6,98 +6,95 @@
   <title>Park Sang Hyun</title>
 
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background: #f6f6f6;
+      background: #fafafa;
       color: #222;
       line-height: 1.65;
     }
 
-    a { color: #2563eb; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
 
     .container {
-      max-width: 1100px;
+      max-width: 1080px;
       margin: 0 auto;
-      padding: 48px 24px;
+      padding: 56px 24px;
       display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 48px;
+      grid-template-columns: 260px 1fr;
+      gap: 52px;
     }
 
     .sidebar {
       position: sticky;
-      top: 48px;
+      top: 56px;
       height: fit-content;
-      text-align: center;
-    }
-
-    .profile-img {
-      width: 170px;
-      height: 170px;
-      border-radius: 50%;
-      object-fit: cover;
-      background: #ddd;
-      border: 1px solid #ddd;
-      margin-bottom: 24px;
     }
 
     .name {
-      font-size: 30px;
+      font-size: 32px;
       font-weight: 700;
-      margin-bottom: 8px;
+      line-height: 1.2;
+      margin-bottom: 14px;
     }
 
     .role {
       font-size: 15px;
       color: #555;
-      margin-bottom: 18px;
+      margin-bottom: 24px;
     }
 
-    .education-box {
-      font-size: 14px;
-      color: #444;
-      margin: 18px 0;
-      padding-top: 16px;
-      border-top: 1px solid #ddd;
-      text-align: left;
-    }
-
-    .education-box strong {
-      display: block;
-      margin-bottom: 4px;
-      color: #222;
-    }
-
-    .contact {
-      font-size: 14px;
-      color: #444;
+    .side-block {
+      border-top: 1px solid #e5e5e5;
+      padding-top: 18px;
       margin-top: 18px;
-      padding-top: 16px;
-      border-top: 1px solid #ddd;
-      text-align: left;
+      font-size: 14px;
+      color: #444;
     }
 
-    .contact div { margin-bottom: 6px; }
+    .side-block strong {
+      display: block;
+      color: #222;
+      margin-bottom: 6px;
+    }
+
+    .side-block div {
+      margin-bottom: 6px;
+    }
 
     .content {
       background: #fff;
-      padding: 44px 50px;
-      border-radius: 16px;
-      border: 1px solid #e5e5e5;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+      border: 1px solid #e8e8e8;
+      border-radius: 18px;
+      padding: 44px 48px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.035);
     }
 
-    section { margin-bottom: 42px; }
-    section:last-child { margin-bottom: 0; }
+    section {
+      margin-bottom: 46px;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
 
     h2 {
       font-size: 22px;
-      border-bottom: 1px solid #e5e5e5;
-      padding-bottom: 8px;
       margin-bottom: 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e5e5e5;
     }
 
     h3 {
@@ -105,14 +102,23 @@
       margin-bottom: 6px;
     }
 
+    p {
+      margin-bottom: 10px;
+    }
+
     .meta {
       font-size: 14px;
       color: #666;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
-    .item { margin-bottom: 28px; }
-    .item:last-child { margin-bottom: 0; }
+    .item {
+      margin-bottom: 34px;
+    }
+
+    .item:last-child {
+      margin-bottom: 0;
+    }
 
     .keywords {
       font-weight: 600;
@@ -128,34 +134,77 @@
 
     .tag {
       font-size: 13px;
-      padding: 4px 10px;
-      background: #f1f5f9;
-      border: 1px solid #e2e8f0;
+      padding: 5px 11px;
+      background: #f4f6f8;
+      border: 1px solid #e1e5ea;
       border-radius: 999px;
       color: #334155;
     }
 
-    ul { padding-left: 20px; }
-    li { margin-bottom: 6px; }
+    ul {
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .gallery figure {
+      border: 1px solid #e5e5e5;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #f8f8f8;
+    }
+
+    .gallery img {
+      width: 100%;
+      display: block;
+    }
+
+    .gallery figcaption {
+      font-size: 13px;
+      color: #555;
+      padding: 8px 10px;
+      border-top: 1px solid #e5e5e5;
+      background: #fff;
+    }
 
     .demo-media {
       width: 100%;
       max-width: 640px;
-      border-radius: 12px;
+      border-radius: 14px;
       border: 1px solid #e5e5e5;
-      margin-top: 14px;
+      margin-top: 16px;
       display: block;
+      background: #f8f8f8;
     }
 
-    @media (max-width: 820px) {
+    @media (max-width: 860px) {
       .container {
         grid-template-columns: 1fr;
-        padding: 28px 18px;
-        gap: 28px;
+        gap: 30px;
+        padding: 32px 18px;
       }
 
-      .sidebar { position: static; }
-      .content { padding: 30px 24px; }
+      .sidebar {
+        position: static;
+      }
+
+      .content {
+        padding: 30px 24px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -163,26 +212,26 @@
 <body>
   <main class="container">
     <aside class="sidebar">
-      <img class="profile-img" src="assets/profile.jpg" alt="Park Sang Hyun profile photo" />
-
       <div class="name">Park Sang Hyun</div>
 
       <div class="role">
         Undergraduate Student<br />
-        Robotics & Computer Vision
+        Robotics · Computer Vision<br />
+        Robot Manipulation
       </div>
 
-      <div class="education-box">
-        <strong>Kyung Hee University</strong>
+      <div class="side-block">
+        <strong>Education</strong>
+        Kyung Hee University<br />
         Software Convergence<br />
         Robotics & Computer Vision Track<br />
-        3rd Year, 1st Semester<br />
         2024 - Present
       </div>
 
-      <div class="contact">
-        <div><strong>Email</strong>: <a href="mailto:allen516@khu.ac.kr">allen516@khu.ac.kr</a></div>
-        <div><strong>GitHub</strong>: <a href="https://github.com/tydfuyhf">tydfuyhf</a></div>
+      <div class="side-block">
+        <strong>Contact</strong>
+        <div>Email: <a href="mailto:allen516@khu.ac.kr">allen516@khu.ac.kr</a></div>
+        <div>GitHub: <a href="https://github.com/tydfuyhf">tydfuyhf</a></div>
       </div>
     </aside>
 
@@ -190,13 +239,14 @@
       <section>
         <h2>About</h2>
         <p>
-          I am an undergraduate student at Kyung Hee University interested in robotic systems
-          that connect visual perception, 3D scene understanding, grasp prediction, and motion planning.
+          I am an undergraduate student interested in robotic systems that connect visual perception,
+          3D scene understanding, grasp prediction, and motion planning.
         </p>
       </section>
 
       <section>
         <h2>Research Interests</h2>
+
         <p class="keywords">
           Robotics · Computer Vision · 3D Scene Understanding · Robot Manipulation
         </p>
@@ -224,13 +274,35 @@
           <ul>
             <li>
               Built a ROS2-based perception-to-grasp pipeline integrating Grounded-SAM,
-              RGB-D perception, semantic point cloud generation, signed TSDF construction,
+              RGB-D perception, semantic point cloud generation, TSDF construction,
               and VGN-based grasp candidate prediction.
             </li>
             <li>
               Designed the pipeline toward scene-aware robotic grasping and motion planning.
             </li>
           </ul>
+
+          <div class="gallery">
+            <figure>
+              <img src="assets/gazebo_view.png" alt="Gazebo simulation view" />
+              <figcaption>Gazebo simulation environment</figcaption>
+            </figure>
+
+            <figure>
+              <img src="assets/front_view.png" alt="Front RGB-D camera view" />
+              <figcaption>RGB-D camera view</figcaption>
+            </figure>
+
+            <figure>
+              <img src="assets/vgn_view1.png" alt="VGN visualization view" />
+              <figcaption>VGN grasp visualization</figcaption>
+            </figure>
+
+            <figure>
+              <img src="assets/4view_240k_vgn_pose.png" alt="VGN grasp pose candidates" />
+              <figcaption>Predicted grasp pose candidates</figcaption>
+            </figure>
+          </div>
         </div>
 
         <div class="item">
@@ -252,7 +324,7 @@
         </div>
 
         <div class="item">
-          <h3>4-DOF Robot Arm</h3>
+          <h3>4-DOF Fin Ray Robot Arm</h3>
           <div class="meta">
             <a href="https://github.com/tydfuyhf/4dof_fin_ray">
               GitHub Repository
@@ -261,7 +333,7 @@
 
           <ul>
             <li>
-              Designed and 3D-printed a 4-DOF robotic arm
+              Designed and 3D-printed a 4-DOF robotic arm with compliant Fin Ray-inspired structure.
             </li>
             <li>
               Implemented URDF modeling, RViz2 visualization, and inverse-kinematics-based end-effector control.
